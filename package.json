@@ -1,15 +1,20 @@
 {
   "name": "tiktok-dl-backend-elysia-bun",
-  "version": "1.0.50",
+  "module": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
-  },
-  "dependencies": {
-    "elysia": "latest"
+    "start": "bun run index.js",
+    "dev": "bun --hot index.js"
   },
   "devDependencies": {
     "bun-types": "latest"
   },
-  "module": "src/index.js"
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^0.6.0",
+    "axios": "^1.5.0",
+    "elysia": "^0.6.23"
+  }
 }
